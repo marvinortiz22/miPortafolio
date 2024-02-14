@@ -1,0 +1,20 @@
+[
+    {
+        "nombre": "proyecto 1",
+        "srcfoto": "./static/perfil.jpg",
+        "descripcion": "esta es una descripcion",
+        "tecnologias": ["html","css","js"]
+    },
+    {
+        "nombre": "proyecto 2",
+        "srcfoto": "./static/perfil.jpg",
+        "descripcion": "esta es una descripcion",
+        "tecnologias": ["html","css","js"]
+    },
+    {
+        "nombre": "proyecto 3",
+        "srcfoto": "./static/perfil.jpg",
+        "descripcion": "esta es una descripcion",
+        "tecnologias": ["html","css","js"]
+    }
+]
