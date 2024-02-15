@@ -1,6 +1,7 @@
+
 body {
   margin: 0;
-  background-color: gray;
+  background-color: #F6F1F0;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -24,6 +25,7 @@ footer {
   flex-wrap: nowrap;*/
   display: grid;
   grid-template-columns: 18% auto;
+  grid-template-rows: 80% 20%;
   height: auto;
   /*padding: 10px;*/
   text-align: justify;
@@ -32,15 +34,16 @@ footer {
 .descripcion-texto{
   margin:10px;
   height: auto;
+  grid-row: 1;
   grid-column: 2;
-  
 }
+
 .mi-foto {
   width: 100%;
-  
   grid-column: 1;
- margin-left: 1%;
- margin-right: 1%;
+  grid-row: 1/span 2;
+  margin-left: 1%;
+  margin-right: 1%;
 }
 
 .misproyectos {
@@ -51,7 +54,7 @@ footer {
   border: 1px solid black;
   color: black;
   border-radius: 5px;
-  background-color: gray;
+  background-color: #F6F1F0;
   height: auto;
 }
 
@@ -77,6 +80,7 @@ footer {
   height: auto;
   text-align: center;
   font-size: 1em;
+  font-size: 0.85em;
 }
 
 .misproyectostitle{
@@ -86,11 +90,14 @@ footer {
 .githubproyectoicon{
   grid-row:1;
   grid-column: 1;
-  width: 100%;
-  margin: 5%;
+  width: 90%;
+  margin: auto auto;
+  
 }
 
 .nombreproyecto{
+  font-weight: bold;
+  margin: auto auto;
   grid-row:1;
   grid-column: 1/span 2;
   width: 100%;
@@ -126,8 +133,8 @@ footer {
 }
 
 .tecnologiaicono{
-  width: 10%;
-  height: 3em;
+  height: 2rem;
+  aspect-ratio: 1/1;
 }
 
 .vertodos {
@@ -135,3 +142,60 @@ footer {
   color: inherit;
 }
 
+.contactocontainer{
+  grid-row: 2;
+  width: 98%;
+  
+  display: flex;
+  justify-content: space-around
+}
+
+.contactoelemento{
+  display: grid;
+  
+  grid-template-columns: 10% auto;
+  grid-template-rows: auto;
+  
+  height: auto;
+  align-items: center;
+}
+
+.contactoicono{
+  width: 1.25em;
+  margin: auto auto;
+  aspect-ratio: 1/1;
+  grid-column: 1;
+}
+
+.contactotexto{
+  
+  margin: auto auto;
+  grid-column: 2;
+  
+}
+
+.Nwhatsapp{
+  margin-left: 12%;
+}
+
+@media (max-width: 768px) {
+  .mi-descripcion {
+    margin: 1%;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+  }
+
+  .descripcion-texto{
+    margin:10px;
+    height: auto;
+    
+  }
+  
+  .mi-foto {
+    width: 100%;
+    margin-left: 1%;
+    margin-right: 1%;
+  }
+}

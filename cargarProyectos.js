@@ -3,7 +3,7 @@ let proyectos = [
         nombre: "proyecto 1",
         srcfoto: "./static/proyectoimage.png",
         descripcion: "Simulador de distintos tipos de arreglos RAID que permite ver como se distribuyen los discos duros que los componen, así como los datos que en ellos se almacenan.",
-        tecnologias: ["html","css","js"]
+        tecnologias: ["html","boostrap","js"]
     },
     {
         nombre: "proyecto 2",
@@ -37,12 +37,12 @@ function init() {
         proyectoContainer.innerHTML+=`
         <div class="cardproyecto" id="cardproyecto">
             <img src="./static/github.svg" class="githubproyectoicon">
-            <p class="nombreproyecto"><strong id="nombreproyecto">${proyectos[i].nombre}</strong></p>
+            <p class="nombreproyecto">${proyectos[i].nombre}</p>
             <img class="proyectoimage" id="proyectoimage" src="${proyectos[i].srcfoto}">
             <p id="descripcion" class="proyecto-descripcion">${proyectos[i].descripcion}</p>
             <p class="tecnologias">Tecnologías: </p>
             <div class="tecnologiasiconos">
-            ${proyectos[i].tecnologias.map(tecnologia => `<img class="tecnologiaicono" src="./static/tecnologias/${tecnologia}.svg"></img>`).join('')}            </div>
+            ${proyectos[i].tecnologias.map(tecnologia => `<img class="tecnologiaicono" src="./static/tecnologias/${tecnologia}.png"></img>`).join('')}            </div>
         </div>`
 
     }

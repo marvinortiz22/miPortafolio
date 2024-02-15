@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <header>soy un encabezado</header>
+    <header></header>
         <div class="mi-descripcion">
             <img src="./static/perfil.jpg" class="mi-foto">
             <p class="descripcion-texto">Mi nombre es Marvin Ortíz, soy un desarrollador web apasionado con experiencia en la creación de soluciones y  
@@ -20,9 +20,19 @@
                 el framework Django, creando aplicaciones escalables. Capaz de traducir requerimientos en 
                  soluciones técnicas eficientes. Orientado a los detalles y comprometido con la entrega de productos de 
                  alta calidad.Habilidad para trabajar en equipo y excelentes habilidades de comunicación.</p>
+                 <div class="contactocontainer">
+                    <div class="contactoelemento">
+                        <img src="./static/contacto/whatsapp.png" alt="" class="contactoicono">
+                        <p class="contactotexto Nwhatsapp">6146-9737</p>
+                    </div>
+                    <div class="contactoelemento">
+                        <img src="./static/contacto/gmail.png" alt="" class="contactoicono">
+                        <p class="contactotexto">marvincubias22@gmail.com</p>
+                    </div>
+                </div>
         </div>
-    <hr>  
-    <img src="./static/tecnologias/${tecnologias}">
+    <hr>
+    
     <div class="misproyectos" id="misproyectos">
         <a class="vertodos" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
           Ver todos
@@ -34,8 +44,7 @@
             <div class="proyectosocultos" id="proyectosocultos"></div>
         </div>
     </div>
-    <div id="contacto"></div>
-    <footer>soy un footer</footer>
+    <footer></footer>
 </body>
 <script src="./cargarProyectos.js"></script>
 

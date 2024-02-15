@@ -3,7 +3,7 @@
         "nombre": "proyecto 1",
         "srcfoto": "./static/perfil.jpg",
         "descripcion": "esta es una descripcion",
-        "tecnologias": ["html","css","js"]
+        "tecnologias": ["html","boostrap","js"]
     },
     {
         "nombre": "proyecto 2",
