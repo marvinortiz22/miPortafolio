@@ -175,38 +175,34 @@ footer {
   margin-left: 12%;
 }
 
-.tecnologiasManejadasContainer{
-  display: flex;
-  flex-direction: column;
-  padding: 1%;
+.tablatecnologias{
+  border-collapse: separate;
+  border-spacing: 1% 0;
   margin: 1% auto;
-  width: auto;
 }
 
-.tecnologiasManejadasRow{
-  display: grid;
-  width: auto;
-  grid-template-columns: 40% auto;
-}
-
-.tecnologiasManejadasTh{
-  grid-column: 1;
-  font-weight: bold;
-  margin-left: auto;
-}
-
-.tecnologiasManejadasIconos{
-  margin: 1% auto;
-  width: auto;
-  grid-column: 2;
+.tablatecnologias th{
+  font-size: 2em;
 }
 
 .tecnologiasManejadasIcono{
-  height: 2em;
+  margin: 1% 0;
+  height: 3em;
   aspect-ratio: 1/1;
 }
 
-@media (max-width: 768px) {
+.otrasHardSkills{
+  margin: 0 auto;
+}
+
+ul{
+  list-style-type: none;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 0;
+}
+
+@media (max-width: 400px) {
   .mi-descripcion {
     margin: 1%;
     display: flex;
