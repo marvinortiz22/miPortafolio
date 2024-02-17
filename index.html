@@ -8,10 +8,21 @@
     <link rel="stylesheet" href="./styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 
 <body>
-    <header></header>
+    <!--header>
+        <a onclick="sobreMiTab()" ><button class="sobremiTab">sobre mi </button></a>
+        <a onclick="" class="misproyectosTab">mis proyectos</a>
+    </header-->
+    <div class="w3-bar w3-purple" id="navbar">
+        <button class="w3-bar-item w3-button" onclick="sobreMiTab()">Sobre mi</button>
+        <button class="w3-bar-item w3-button" onclick="misProyectosTab()">Mis proyectos</button>
+      </div>
+    
+    <div id="contenido">
+        
         <div class="mi-descripcion">
             <img src="./static/perfil.jpg" class="mi-foto">
             <p class="descripcion-texto">Mi nombre es Marvin Ortíz, soy un desarrollador web apasionado con experiencia en la creación de soluciones y  
@@ -21,18 +32,20 @@
                  soluciones técnicas eficientes. Orientado a los detalles y comprometido con la entrega de productos de 
                  alta calidad.Habilidad para trabajar en equipo y excelentes habilidades de comunicación.</p>
                  <div class="contactocontainer">
-                    <div class="contactoelemento">
+                    <img src="./static/contacto/whatsapp.png" alt="" class="contactoicono">
+                    <img src="./static/contacto/gmail.png" alt="" class="contactoicono">
+                    <img src="./static/contacto/github-icon.png" alt="" class="contactoicono">
+                    <!--div class="contactoelemento">
                         <img src="./static/contacto/whatsapp.png" alt="" class="contactoicono">
                         <p class="contactotexto Nwhatsapp">1111-1111</p>
                     </div>
                     <div class="contactoelemento">
                         <img src="./static/contacto/gmail.png" alt="" class="contactoicono">
                         <p class="contactotexto">nombreapellido@gmail.com</p>
-                    </div>
+                    </div-->
                 </div>
         </div>
-    <hr>
-    
+    <!--hr>
     <div class="misproyectos" id="misproyectos">
         <a class="vertodos" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
           Ver todos
@@ -43,11 +56,12 @@
         <div class="collapse" id="collapseExample">
             <div class="proyectosocultos" id="proyectosocultos"></div>
         </div>
-    </div>
+    </div-->
+    
     <hr>
    
     <div class="skills">
-        <h1 style="text-align: center;">Hard skills</h1>
+        <h2 style="text-align: center;">Hard skills</h1>
         <table class="tablatecnologias">
             <tr>
                 <th>Desarrollo front-end:</th>
@@ -66,7 +80,7 @@
                 <td>
                     <img src="./static/tecnologias/django.png" alt="" class="tecnologiasManejadasIcono">
                     <img src="./static/tecnologias/springboot.png" alt="" class="tecnologiasManejadasIcono">
-                    <img src="./static/tecnologias/express.png" alt="" class="tecnologiasManejadasIcono">
+                    <img src="./static/tecnologias/express.png" alt="" class="tecnologiasManejadasIcono express">
                 </td>
             </tr>
             <tr>
@@ -79,23 +93,59 @@
                 </td>
             </tr>
         </table>
-        <div class="otrasHardSkills list-unstyled">
-            <h2 style="text-align: center;">Otras</h2>
-            <ul class="list-unstyled">
-                <li>Conocimiento de triggers y join SQL</li>
-                <li>Diseño y modelado de base de datos (Power Designer)</li>
-                <li>Análisis de requirimientos</li>
-                <li>Diseño de interfaces</li>
-            </ul>
-        </div>
-        
-        <div class="skills-texto">
-
+        <hr>
+        <div class="otrasSkills">
+            <div class="Hard Skills">
+                <h2 style="text-align: center;">Otras hard skills</h2>
+                <ul class="">
+                    <li>Diseño y modelado de base de datos (Power Designer)</li>
+                    <li>Operaciones en SQL (consultas, triggers, inner joins)</li>
+                    <li>Análisis de requirimientos</li>
+                    <li>Diseño de interfaces</li>
+                </ul>
+            </div>
+            <div class="Soft Skills">
+                <h2 style="text-align: center;">Soft skills</h2>
+                <ul class="">
+                    <li>Sociable</li>
+                    <li>Comprometido</li>
+                    <li>Eficiente</li>
+                    <li>Adaptable</li>
+                    <li>Buen nivel de aprendizaje</li>
+                </ul>
+            </div>
         </div>
     </div>
     <footer></footer>
 </body>
 <script src="./cargarProyectos.js"></script>
+<script>
+    let sobreMiHTML=document.getElementById("contenido").innerHTML
+    let misProyectosHTML=`
+            <div class="misproyectos2" id="misproyectos2">
+                <div class="proyectoscontainer" id="proyectoscontainer">
+                </div>
+                <div class="collaps" id="collapseExampl">
+                    <div class="proyectosocultos" id="proyectosocultos"></div>
+                </div>
+            </div>`
+    let pestañaActual="sobre mi",misProyectosClick=0
+    function sobreMiTab(){
+        if(pestañaActual!="sobre mi"){
+            document.getElementById("contenido").innerHTML=sobreMiHTML
+            pestañaActual="sobre mi"
+        }
+            
+    }
+    function misProyectosTab(){
+        if(pestañaActual!="mis proyectos"){
+            document.getElementById("contenido").innerHTML=misProyectosHTML
+            cargarProyectos()
+            pestañaActual="mis proyectos"
+        }
+        
+    }
+</script>
 
 
 </html>

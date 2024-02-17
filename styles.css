@@ -7,28 +7,89 @@ body {
   flex-direction: column;
 }
 
+/*body {
+  animation: fadeInAnimation ease 1.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}*/
+
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+
+  100% {
+      opacity: 1;
+  }
+}
+
 header {
   background-color: #E8320B;
   width: 100%;
-  height: 20px;
+  height: auto;
+}
+
+#navbar{
+  justify-content: center;
 }
 
 footer {
-  background-color: #E8320B;
+  background-color: purple;
   width: 100%;
   height: 20px;
   margin-top: auto;
 }
+.sobremiTab{
+  background-color: inherit;
+  border: none;
+}
+
+.sobremiTab:hover{
+  background-color: white;
+  height: 100%;
+  margin: 0;
+}
+
+.contactocontainer{
+  grid-row: 2;
+  width: 98%;
+  display: flex;
+  /*justify-content: space-around*/
+  justify-content: flex-start;
+  
+}
+
+.contactoicono{
+  width: 1.25em;
+  height: 1.25em;
+  aspect-ratio: 1/1;
+  margin:  0 1%;
+  /*grid-column: 1;*/
+}
+
+.contactoelemento{
+  display: grid; 
+  grid-template-columns: 10% auto;
+  grid-template-rows: auto;
+  height: auto;
+  align-items: center;
+}
+
+.contactotexto{
+  margin: auto auto;
+  grid-column: 2;
+}
+
+.Nwhatsapp{
+  margin-left: 12%;
+}
 
 .mi-descripcion {
   margin: 1%;
-  /*display: flex;
-  flex-wrap: nowrap;*/
   display: grid;
   grid-template-columns: 18% auto;
   grid-template-rows: 80% 20%;
   height: auto;
-  /*padding: 10px;*/
   text-align: justify;
 }
 
@@ -68,14 +129,12 @@ footer {
 }
 
 .cardproyecto {
-  /*display: flex;
-  flex-direction: column;*/
   display: grid;
   align-items: center;
   grid-template-columns: 10% auto;
-  grid-template-rows: auto auto auto auto auto;
-  border: 1px solid #333; /* Ancho y color del borde */
-  border-radius: 10px; 
+  grid-template-rows: auto auto auto auto;
+  border: 1px solid #333; 
+  /*border-radius: 10px; */
   width: 48%;
   margin: 1%;
   height: auto;
@@ -123,14 +182,14 @@ footer {
 .tecnologias{
   font-weight: bold;
   grid-row: 4;
-  grid-column: 1/span 2;
+  grid-column: 1;
   margin: 1%;
   text-align: center;
 }
 
 .tecnologiasiconos{
-  grid-row: 5;
-  grid-column: 1/span 2;
+  grid-row: 4;
+  grid-column: 2;
   width: 100%;
 }
 
@@ -144,40 +203,9 @@ footer {
   color: inherit;
 }
 
-.contactocontainer{
-  grid-row: 2;
-  width: 98%;
-  display: flex;
-  justify-content: space-around
-}
-
-.contactoelemento{
-  display: grid; 
-  grid-template-columns: 10% auto;
-  grid-template-rows: auto;
-  height: auto;
-  align-items: center;
-}
-
-.contactoicono{
-  width: 1.25em;
-  margin: auto auto;
-  aspect-ratio: 1/1;
-  grid-column: 1;
-}
-
-.contactotexto{
-  margin: auto auto;
-  grid-column: 2;
-}
-
-.Nwhatsapp{
-  margin-left: 12%;
-}
-
 .tablatecnologias{
   border-collapse: separate;
-  border-spacing: 1% 0;
+  border-spacing: 0 0;
   margin: 1% auto;
   animation-name: floating;
   animation-duration: 3s;
@@ -189,6 +217,7 @@ footer {
   font-size: 2em;
 }
 
+
 .tecnologiasManejadasIcono{
   margin: 1% 0;
   height: 3em;
@@ -196,15 +225,30 @@ footer {
   
 }
 
-.otrasHardSkills{
+.express{
+  aspect-ratio: 16/9;
+}
+
+.otrasSkills{
+  display: flex;
+}
+
+.Skills{
   margin: 0 auto;
+  width: 50%;
 }
 
 ul{
+  /*list-style: url(./static/star.png);*/
   list-style-type: none;
   width: fit-content;
-  margin: 0 auto;
+  margin: 1% auto;
   padding: 0;
+}
+
+li::before{
+  content: "\2738";
+  color: purple;
 }
 
 @media (max-width: 400px) {
@@ -226,6 +270,27 @@ ul{
     width: 100%;
     margin-left: 1%;
     margin-right: 1%;
+  }
+
+  .cardproyecto {
+    width: 98%;
+    margin: 1%;
+  }
+
+  .tablatecnologias{
+    border-spacing: 0;
+  }
+
+  .otrasSkills{
+    flex-direction: column;
+  }
+
+  .Skills{
+    width: 100%;
+  }
+
+  ul{
+    margin: 1%;
   }
 }
 

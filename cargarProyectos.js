@@ -31,6 +31,10 @@ let proyectos = [
     },
 ]
 function init() {
+    cargarProyectos()
+}  
+
+function cargarProyectos(){
     let proyectoContainer=document.getElementById("proyectoscontainer")
     for(let i=0;i<proyectos.length;i++){
         i==2?proyectoContainer=document.getElementById("proyectosocultos"):false
@@ -46,5 +50,5 @@ function init() {
         </div>`
 
     }
-}  
+}
 document.addEventListener('DOMContentLoaded', init());
