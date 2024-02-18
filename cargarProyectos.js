@@ -37,16 +37,18 @@ function init() {
 function cargarProyectos(){
     let proyectoContainer=document.getElementById("proyectoscontainer")
     for(let i=0;i<proyectos.length;i++){
-        i==2?proyectoContainer=document.getElementById("proyectosocultos"):false
+        /*i==2?proyectoContainer=document.getElementById("proyectosocultos"):false*/
         proyectoContainer.innerHTML+=`
         <div class="cardproyecto" id="cardproyecto">
-            <img src="./static/github.svg" class="githubproyectoicon">
+            <img src="./static/github-icon.png" class="githubproyectoicon">
             <p class="nombreproyecto">${proyectos[i].nombre}</p>
             <img class="proyectoimage" id="proyectoimage" src="${proyectos[i].srcfoto}">
             <p id="descripcion" class="proyecto-descripcion">${proyectos[i].descripcion}</p>
             <p class="tecnologias">Tecnologías: </p>
             <div class="tecnologiasiconos">
-            ${proyectos[i].tecnologias.map(tecnologia => `<img class="tecnologiaicono" src="./static/tecnologias/${tecnologia}.png"></img>`).join('')}            </div>
+            ${proyectos[i].tecnologias.map(tecnologia => `<img class="tecnologiaicono" src="./static/tecnologias/${tecnologia}.png"></img>`).join('')}
+            </div>
+            <a href="" class="abotonvisitar"><button class="botonvisitar">Visitar</button></a>
         </div>`
 
     }
