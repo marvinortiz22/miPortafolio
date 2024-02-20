@@ -1,4 +1,5 @@
 
+
 body {
   margin: 0;
   background-color: #F6F1F0;
@@ -160,6 +161,13 @@ footer {
   text-align: center;
 }
 
+.agithubproyectoicon{
+  width: fit-content;
+  grid-row:1;
+  grid-column: 1;
+  margin: 1%;
+}
+
 .githubproyectoicon{
   grid-row:1;
   grid-column: 1;
@@ -173,6 +181,7 @@ footer {
   grid-row:1;
   grid-column: 1/span 2;
   width: 100%;
+  background-color: transparent;
 }
 
 .proyectoimage {
@@ -229,7 +238,9 @@ footer {
   border-radius: 5px;
   background-color: inherit;
   margin: 1% auto;
+  
   color: green;
+  font-weight: bold;
   border: 1px solid green
 }
 
@@ -288,7 +299,7 @@ li::before{
 }
 
 hr{
-  border: 1px solid black!important;
+  border: 1px solid gray!important;
 }
 
 @media (max-width: 400px) {

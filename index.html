@@ -9,6 +9,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -18,8 +22,8 @@
         <a onclick="" class="misproyectosTab">mis proyectos</a>
     </header-->
     <div class="w3-bar w3-purple" id="navbar">
-        <button class="w3-bar-item w3-button" style="width: 50%;" onclick="sobreMiTab()">Sobre mi</button>
-        <button class="w3-bar-item w3-button" style="width: 50%;" onclick="misProyectosTab()">Mis proyectos</button>
+        <button class="w3-bar-item w3-button" style="width: 50%; font-weight: bold;" onclick="sobreMiTab()">Sobre mi</button>
+        <button class="w3-bar-item w3-button" style="width: 50%; font-weight: bold;" onclick="misProyectosTab()">Mis proyectos</button>
       </div>
       <div id="contenido">
         <!--div class="cardproyecto" id="cardproyecto">
@@ -45,19 +49,12 @@
                  soluciones técnicas eficientes. Orientado a los detalles y comprometido con la entrega de productos de 
                  alta calidad.Habilidad para trabajar en equipo y excelentes habilidades de comunicación.</p>
                  <div class="contactocontainer">
-                    <img src="./images/contacto/whatsapp.png" alt="" class="contactoicono">
-                    <img src="./images/contacto/gmail.png" alt="" class="contactoicono">
-                    <img src="./images/contacto/github-icon.png" alt="" class="contactoicono">
-                    <!--div class="contactoelemento">
-                        <img src="./images/contacto/whatsapp.png" alt="" class="contactoicono">
-                        <p class="contactotexto Nwhatsapp">1111-1111</p>
-                    </div>
-                    <div class="contactoelemento">
-                        <img src="./images/contacto/gmail.png" alt="" class="contactoicono">
-                        <p class="contactotexto">nombreapellido@gmail.com</p>
-                    </div-->
+                    <a href="" class="contactoicono" target="_blank" ><img src="./images/contacto/whatsapp.png" class="contactoicono"></a>
+                    <a href="https://mail.google.com/mail/u/0/?fs=1&to=marvincubias22@gmail.com&tf=cm" class="contactoicono" target="_blank" ><img src="./images/contacto/gmail.png" alt="" title="marvincubias22@gmail.com" class="contactoicono"></a>
+                    <a href="https://github.com/marvinortiz22" class="contactoicono" target="_blank" ><img src="./images/contacto/github-dark.png" alt="" class="contactoicono" title="marvinortiz22"></a> 
                 </div>
         </div>
+        
         <!--hr>
         <div class="misproyectos" id="misproyectos">
             <a class="vertodos" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
@@ -73,17 +70,17 @@
         <hr>
     
         <div class="skills">
-            <h2 style="text-align: center;">Hard skills</h1>
+            <h1 style="text-align: center;">Hard skills</h1>
             <table class="tablatecnologias">
                 <tr>
                     <td class="th">Desarrollo front-end:</td>
                     <td class="td">
                         
-                        <img src="./images/tecnologias/html.png" alt="" class="tecnologiasManejadasIcono">
-                        <img src="./images/tecnologias/css.png" alt="" class="tecnologiasManejadasIcono">
-                        <img src="./images/tecnologias/boostrap.png" alt="" class="tecnologiasManejadasIcono">
-                        <img src="./images/tecnologias/js.png" alt="" class="tecnologiasManejadasIcono">
-                        <img src="./images/tecnologias/react.png" alt="" class="tecnologiasManejadasIcono">
+                        <img src="./images/tecnologias/html.png" title="HMTL" alt="" class="tecnologiasManejadasIcono">
+                        <img src="./images/tecnologias/css.png" title="CSS" alt="" class="tecnologiasManejadasIcono">
+                        <img src="./images/tecnologias/boostrap.png" title="Boostrap" alt="" class="tecnologiasManejadasIcono">
+                        <img src="./images/tecnologias/js.png" alt="" title="JavaScript" class="tecnologiasManejadasIcono">
+                        <img src="./images/tecnologias/react.png" alt="" title="React" class="tecnologiasManejadasIcono">
                         
                     </td>
                 </tr>
@@ -92,25 +89,26 @@
                         Desarrollo back-end: 
                     </td>
                     <td class="td">
-                        <img src="./images/tecnologias/django.png" alt="" class="tecnologiasManejadasIcono">
-                        <img src="./images/tecnologias/springboot.png" alt="" class="tecnologiasManejadasIcono">
-                        <img src="./images/tecnologias/express.png" alt="" class="tecnologiasManejadasIcono express">
+                        <img src="./images/tecnologias/django.png" alt="" title="Django" class="tecnologiasManejadasIcono">
+                        <img src="./images/tecnologias/spring boot.png" alt="" title="Spring Boot" class="tecnologiasManejadasIcono">
+                        <img src="./images/tecnologias/express.png" alt="" title="Express js" class="tecnologiasManejadasIcono express">
                     </td>
                 </tr>
+                
                 <tr>
                     <td class="th">
                         Bases de datos: 
                     </td>
                     <td class="td">
-                        <img src="./images/tecnologias/mysql.png" alt="" class="tecnologiasManejadasIcono">
-                        <img src="./images/tecnologias/postgress.png" alt="" class="tecnologiasManejadasIcono">
+                        <img src="./images/tecnologias/mysql.png" alt="" title="MySQL" class="tecnologiasManejadasIcono">
+                        <img src="./images/tecnologias/postgresql.png" alt="" title="PostreSQL" class="tecnologiasManejadasIcono">
                     </td>
                 </tr>
             </table>
             <hr>
             <div class="otrasSkills">
                 <div class="Hard Skills">
-                    <h2 style="text-align: center;">Hard skills</h2>
+                    <h1 style="text-align: center;">Hard skills</h2>
                     <ul class="">
                         <li>Diseño y modelado de base de datos (Power Designer)</li>
                         <li>Operaciones en SQL (consultas, triggers, inner joins)</li>
@@ -119,7 +117,7 @@
                     </ul>
                 </div>
                 <div class="Soft Skills">
-                    <h2 style="text-align: center;">Soft skills</h2>
+                    <h1 style="text-align: center;">Soft skills</h2>
                     <ul class="">
                         <li>Sociable</li>
                         <li>Comprometido</li>
