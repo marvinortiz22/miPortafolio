@@ -19,64 +19,45 @@
 </head>
 
 <body>
-    <div class="w3-bar w3-purple" id="navbar">
+    <div class="w3-bar w3-black" id="navbar">
         <button class="w3-bar-item w3-button" style="width: 50%; font-weight: bold;" onclick="sobreMiTab()">Sobre
             mi</button>
         <button class="w3-bar-item w3-button" style="width: 50%; font-weight: bold;" onclick="misProyectosTab()">Mis
             proyectos</button>
     </div>
     <div id="contenido">
-        <!--div class="cardproyecto" id="cardproyecto">
-            <img src="./images/github-icon.png" class="githubproyectoicon">
-            <p class="nombreproyecto">proyecto 1</p>
-            <img class="proyectoimage" id="proyectoimage" src="./images/proyectoimage.png">
-            <p id="descripcion" class="proyecto-descripcion">Simulador de distintos tipos de arreglos RAID que permite ver como se distribuyen los discos duros que los componen, así como los datos que en ellos se almacenan.</p>
-            <p class="tecnologias">Tecnologías: </p>
-            <div class="tecnologiasiconos">
-            <img class="tecnologiaicono" src="./images/tecnologias/html.png"></img>
-            <img class="tecnologiaicono" src="./images/tecnologias/css.png"></img>
-            <img class="tecnologiaicono" src="./images/tecnologias/js.png"></img>
+        
+            <div class="mi-descripcion container">
+                <img src="./images/perfil.jpg" class="mi-foto">
+                <div class="descripicion-container">
+                    <div class="titulo-descripcion">
+                        <h1>Marvin Ortiz</h1>
+                        <h2 >Desarrollador full stack</h2>
+                    </div>
+                    <p class="descripcion-texto">Desarrollador web apasionado con experiencia
+                        en la creación de soluciones y
+                        sitios web funcionales. Manejo en HTML, CSS y JavaScript, con conocimiento de Bootstrap para el
+                        desarrollo de interfaces modernas. Experiencia en desarrollo back-end utilizando
+                        los framework Django y Spring Boot, creando aplicaciones escalables. Capaz de traducir requerimientos en
+                        soluciones técnicas eficientes. Orientado a los detalles y comprometido con la entrega de productos de
+                        alta calidad. Habilidad para trabajar en equipo y excelentes habilidades de comunicación.</p>
+                        <!--p style="margin-left: 25px; font-weight: bold; color:black">Contáctame: </p-->
+                        <div class="contactocontainer">
+                        <!--a href="" class="contactoicono" target="_blank"><img src="./images/contacto/whatsapp.png"
+                                class="contactoicono"></a-->
+                        <a href="https://mail.google.com/mail/u/0/?fs=1&to=marvincubias22@gmail.com&tf=cm" class="contactoicono"
+                            target="_blank"><img src="./images/contacto/gmail.png" alt="" title="marvincubias22@gmail.com"
+                                class="contactoicono"></a>
+                        <a href="https://github.com/marvinortiz22" class="contactoicono" target="_blank"><img
+                                src="./images/contacto/github-dark.png" alt="" class="contactoicono" title="marvinortiz22"></a>
+                    </div>
+                </div>
             </div>
-            <a href="" target="_blank" class="abotonvisitar"><button class="botonvisitar">Visitar</button></a>
-        </div-->
-
-        <div class="mi-descripcion">
-            <img src="./images/perfil.jpg" class="mi-foto">
-            <p class="descripcion-texto">Mi nombre es Marvin Ortíz, soy un desarrollador web apasionado con experiencia
-                en la creación de soluciones y
-                sitios web funcionales. Manejo en HTML, CSS y JavaScript, con conocimiento de Bootstrap para el
-                desarrollo de interfaces modernas. Experiencia en desarrollo back-end utilizando
-                el framework Django, creando aplicaciones escalables. Capaz de traducir requerimientos en
-                soluciones técnicas eficientes. Orientado a los detalles y comprometido con la entrega de productos de
-                alta calidad.Habilidad para trabajar en equipo y excelentes habilidades de comunicación.</p>
-            <div class="contactocontainer">
-                <a href="" class="contactoicono" target="_blank"><img src="./images/contacto/whatsapp.png"
-                        class="contactoicono"></a>
-                <a href="https://mail.google.com/mail/u/0/?fs=1&to=marvincubias22@gmail.com&tf=cm" class="contactoicono"
-                    target="_blank"><img src="./images/contacto/gmail.png" alt="" title="marvincubias22@gmail.com"
-                        class="contactoicono"></a>
-                <a href="https://github.com/marvinortiz22" class="contactoicono" target="_blank"><img
-                        src="./images/contacto/github-dark.png" alt="" class="contactoicono" title="marvinortiz22"></a>
-            </div>
-        </div>
-
-        <!--hr>
-        <div class="misproyectos" id="misproyectos">
-            <a class="vertodos" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-            Ver todos
-            </a><i class="fa-brands fa-github"></i>
-            <h1 class="misproyectostitle">Mis proyectos</h1>
-            <div class="proyectoscontainer" id="proyectoscontainer">
-            </div>
-            <div class="collapse" id="collapseExample">
-                <div class="proyectosocultos" id="proyectosocultos"></div>
-            </div>
-        </div-->
+        
         <hr>
-
         <div class="skills">
             <h1 style="text-align: center;">Hard skills</h1>
-            <table class="tablatecnologias">
+            <table class="tablatecnologias container">
                 <tr>
                     <td class="th">Desarrollo front-end:</td>
                     <td class="td">
@@ -119,12 +100,12 @@
                 </tr>
             </table>
             <hr>
-            <div class="otrasSkills">
+            <div class="otrasSkills container">
                 <div class="Hard Skills">
                     <h1 style="text-align: center;">Hard skills</h2>
                         <ul class="">
-                            <li>Diseño y modelado de base de datos (Power Designer)</li>
-                            <li>Operaciones en SQL (consultas, triggers, inner joins)</li>
+                            <li>Diseño y modelado de base de datos</li>
+                            <li>Operaciones en SQL (consultas, joins, triggers, funciones y procesos almacenados)</li>
                             <li>Análisis de requirimientos</li>
                             <li>Diseño de interfaces</li>
                         </ul>
@@ -142,7 +123,7 @@
             </div>
         </div>
     </div>
-    <div class="misproyectos" id="misproyectos" style="display: none; opacity: 0;">
+    <div class="misproyectos container" id="misproyectos" style="display: none; opacity: 0;">
         <div class="proyectoscontainer" id="proyectoscontainer">
         </div>
     </div>

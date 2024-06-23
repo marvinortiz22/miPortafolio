@@ -1,16 +1,16 @@
 let proyectos = [
     {
-        nombre: "RaidSim",
-        srcfoto: "./images/proyectos/RaidSim.png",
-        descripcion: "Simulador de distintos tipos de arreglos RAID que permite ver como se distribuyen los discos duros que los componen, así como los datos que en ellos se almacenan.",
-        tecnologias: ["HTML", "Boostrap", "JS"],
-        url: "https://marvinortiz22.github.io/RAIDSim/",
-        repositorio: "https://github.com/marvinortiz22/RAIDSim"
+        nombre: "Sistema de planillas y gestión de empleados",
+        srcfoto: "./images/proyectos/sistema de planillas.webp",
+        descripcion: "Software para administrar empleados, incluyendo vacaciones, horas trabajadas, permisos, descuentos y bonos. Automatiza procesos de nómina y mejora la gestión del personal.",
+        tecnologias: ["HTML", "Boostrap", "JS", "Spring Boot", "MySQL","HTML", "Boostrap", "JS", "Spring Boot", "MySQL"],
+        url: "",
+        repositorio: ""
     },
     {
         nombre: "Sistema gestor de notas",
         srcfoto: "./images/proyectos/sistema gestor de notas.webp",
-        descripcion: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa possimus nihil ipsum obcaecati quisquam rerum ducimus maxime optio corrupti at laboriosam architecto minus, sint consequuntur voluptates repellat atque doloribus nesciunt!",
+        descripcion: "Plataforma para la gestión de alumnos, materias y notas escolares. Facilita el seguimiento académico y la generación de reportes. Simplifica la administración educativa con una interfaz intuitiva.",
         tecnologias: ["HTML", "Boostrap", "Django", "MySQL"],
         url: "",
         repositorio: ""
@@ -18,7 +18,7 @@ let proyectos = [
     {
         nombre: "Sistema de estados financieros",
         srcfoto: "./images/proyectos/sistema de estados financieros.jpg",
-        descripcion: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa possimus nihil ipsum obcaecati quisquam rerum ducimus maxime optio corrupti at laboriosam architecto minus, sint consequuntur voluptates repellat atque doloribus nesciunt!",
+        descripcion: "Permite visualizar el balance general y el estado de resultados de una o varias empresas. Incluye cálculos de ratios financieros esenciales. Ayuda en el análisis y toma de decisiones financieras.",
         tecnologias: ["HTML", "Boostrap", "Django", "MySQL"],
         url: "",
         repositorio: ""
@@ -26,7 +26,7 @@ let proyectos = [
     {
         nombre: "Sistema de gestion de proyectos viales",
         srcfoto: "./images/proyectos/sistema de gestion de proyectos viales.jpg",
-        descripcion: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa possimus nihil ipsum obcaecati quisquam rerum ducimus maxime optio corrupti at laboriosam architecto minus, sint consequuntur voluptates repellat atque doloribus nesciunt!",
+        descripcion: "Solución integral para gestionar proyectos de infraestructura vial. Controla costos, materiales y seguimiento de proyectos. Permite la gestión eficiente de clientes y recursos en proyectos viales.",
         tecnologias: ["HTML", "Boostrap", "Django", "MySQL"],
         url: "",
         repositorio: ""
@@ -34,18 +34,26 @@ let proyectos = [
     {
         nombre: "Tekedafash",
         srcfoto: "./images/proyectos/tekedafash.jpg",
-        descripcion: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa possimus nihil ipsum obcaecati quisquam rerum ducimus maxime optio corrupti at laboriosam architecto minus, sint consequuntur voluptates repellat atque doloribus nesciunt!",
+        descripcion: "Plataforma online diseñada para la venta y gestión de productos de moda. Incluye catálogo de productos y carrito de compras. Mejora la experiencia de compra y administración del inventario.",
         tecnologias: ["HTML", "Boostrap", "Django", "MySQL"],
         url: "",
         repositorio: ""
     },
     {
-        nombre: "Sistema de reporte de accidente",
+        nombre: "Sistema de reporte de accidentes viales",
         srcfoto: "./images/proyectos/sistema de reportes de transito.jpg",
-        descripcion: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa possimus nihil ipsum obcaecati quisquam rerum ducimus maxime optio corrupti at laboriosam architecto minus, sint consequuntur voluptates repellat atque doloribus nesciunt!",
+        descripcion: "Aplicación para reportar accidentes de tráfico y ubicarlos en un mapa. Facilita la recopilación de datos y la respuesta rápida ante emergencias. Ayuda a las autoridades y ciudadanos a tener una visión clara de los incidentes viales.",
         tecnologias: ["HTML", "Boostrap", "JS", "Django", "PostgreSQL"],
         url: "",
         repositorio: ""
+    },
+    {
+        nombre: "RaidSim",
+        srcfoto: "./images/proyectos/RaidSim.png",
+        descripcion: "Simulador que permite experimentar con distintos tipos de arreglos RAID. Muestra la distribución de discos duros y cómo se almacenan los datos en ellos. Ideal para entender la redundancia y el rendimiento de cada configuración.",
+        tecnologias: ["HTML", "Boostrap", "JS"],
+        url: "https://marvinortiz22.github.io/RAIDSim/",
+        repositorio: "https://github.com/marvinortiz22/RAIDSim"
     },
 ]
 let sobreMiHTML = document.getElementById("contenido")
@@ -60,13 +68,13 @@ function cargarProyectos() {
     for (let i = 0; i < proyectos.length; i++) {
         /*i==2?proyectoContainer=document.getElementById("proyectosocultos"):false*/
         proyectoContainer.innerHTML += `
-        <div class="cardproyecto" id="cardproyecto">
+        <div class="cardproyecto container" id="cardproyecto">
         <a href="${proyectos[i].repositorio}" class="agithubproyectoicon" target="_blank"><img src="./images/contacto/github-dark.png" title="Ir al repositorio" class="githubproyectoicon"></a>
             <p class="nombreproyecto">${proyectos[i].nombre}</p>
             <img class="proyectoimage" id="proyectoimage" src="${proyectos[i].srcfoto}">
             <p id="descripcion" class="proyecto-descripcion">${proyectos[i].descripcion}</p>
             <p class="tecnologias">Tecnologías: </p>
-            <div class="tecnologiasiconos">
+            <div class="tecnologiasiconos container">
             ${proyectos[i].tecnologias.map(tecnologia => `<img class="tecnologiaicono" title="${tecnologia}" src="./images/tecnologias/${tecnologia}.png"></img>`).join('')}
             </div>
             <a href="${proyectos[i].url}" target="_blank" class="abotonvisitar"><button class="botonvisitar">Visitar</button></a>
