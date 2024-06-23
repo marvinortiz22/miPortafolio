@@ -69,8 +69,10 @@ function cargarProyectos() {
         /*i==2?proyectoContainer=document.getElementById("proyectosocultos"):false*/
         proyectoContainer.innerHTML += `
         <div class="cardproyecto container" id="cardproyecto">
-        <a href="${proyectos[i].repositorio}" class="agithubproyectoicon" target="_blank"><img src="./images/contacto/github-dark.png" title="Ir al repositorio" class="githubproyectoicon"></a>
-            <p class="nombreproyecto">${proyectos[i].nombre}</p>
+            <div class="encabezado-proyecto">
+                <a href="${proyectos[i].repositorio}" class="agithubproyectoicon" target="_blank"><img src="./images/contacto/github-dark.png" title="Ir al repositorio" class="githubproyectoicon"></a>
+                <p class="nombreproyecto">${proyectos[i].nombre}</p>
+            </div>
             <img class="proyectoimage" id="proyectoimage" src="${proyectos[i].srcfoto}">
             <p id="descripcion" class="proyecto-descripcion">${proyectos[i].descripcion}</p>
             <p class="tecnologias">Tecnologías: </p>
