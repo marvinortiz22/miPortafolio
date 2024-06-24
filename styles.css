@@ -342,6 +342,12 @@ hr {
   }
 }
 
+@media(max-width: 768px){
+  .proyecto-descripcion{
+    min-height: 140.75px;
+  }
+}
+
 @keyframes floating {
   0% {
     transform: translate(0, 0px);
