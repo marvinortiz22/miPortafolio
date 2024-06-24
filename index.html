@@ -12,10 +12,6 @@
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -42,22 +38,30 @@
                         soluciones técnicas eficientes. Orientado a los detalles y comprometido con la entrega de productos de
                         alta calidad. Habilidad para trabajar en equipo y excelentes habilidades de comunicación.
                     </p>
-                    <!--p style="margin-left: 25px; font-weight: bold; color:black">Contáctame: </p-->
-                    <div class="contactocontainer">
-                        <!--a href="" class="contactoicono" target="_blank"><img src="./images/contacto/whatsapp.png"
-                                class="contactoicono"></a-->
-                        <a href="https://mail.google.com/mail/u/0/?fs=1&to=marvincubias22@gmail.com&tf=cm" class="contactoicono"
-                            target="_blank"><img src="./images/contacto/gmail.png" alt="" title="marvincubias22@gmail.com"
-                                class="contactoicono"></a>
-                        <a href="https://github.com/marvinortiz22" class="contactoicono" target="_blank"><img
-                                src="./images/contacto/github-dark.png" alt="" class="contactoicono" title="marvinortiz22"></a>
+                    <div class="contactocontainer mt-3">
+                        <a href="" class="d-flex me-3" style="cursor: default;">
+                            <img src="./images/contacto/whatsapp.png" class="contactoicono" alt="">
+                            <p class="contactotexto">6146-9737</p>
+                        </a>
+                        <a href="" class="d-flex me-3" style="cursor: default;">
+                            <img src="./images/contacto/phone.webp" class="contactoicono" alt="">
+                            <p class="contactotexto">7317-5492</p>
+                        </a>
+                        <a href="https://github.com/marvinortiz22" target="_blank" class="d-flex me-3">
+                            <img src="./images/contacto/github-gray.png" class="contactoicono" alt="">
+                            <p class="contactotexto">marvinortiz22</p>
+                        </a>
+                        <a href="https://mail.google.com/mail/u/0/?fs=1&to=marvincubias22@gmail.com&tf=cm" target="_blank" class="d-flex me-3">
+                            <img src="./images/contacto/gmail.png" class="contactoicono" alt="">
+                            <p class="contactotexto">marvincubias22@gmail.com</p>
+                        </a>
                     </div>
                 </div>
             </div>
         
         <hr>
         <div class="skills">
-            <h1 style="text-align: center;">Hard skills</h1>
+            <h1 style="text-align: center;">Tecnologías</h1>
             <table class="tablatecnologias container">
                 <tr>
                     <td class="th">Desarrollo front-end:</td>
@@ -69,10 +73,7 @@
                             class="tecnologiasManejadasIcono">
                         <img src="./images/tecnologias/JS.png" alt="" title="JavaScript"
                             class="tecnologiasManejadasIcono">
-                        <img src="./images/tecnologias/React.png" alt="" title="React"
-                            class="tecnologiasManejadasIcono">
                         <img src="./images/tecnologias/JSP.png" alt="" title="JSP" class="tecnologiasManejadasIcono">
-
                     </td>
                 </tr>
                 <tr>
@@ -84,12 +85,10 @@
                             class="tecnologiasManejadasIcono">
                         <img src="./images/tecnologias/Spring Boot.png" alt="" title="Spring Boot"
                             class="tecnologiasManejadasIcono">
-                        <!--img src="./images/tecnologias/Express.png" alt="" title="Express js"
-                            class="tecnologiasManejadasIcono express"-->
                     </td>
                 </tr>
 
-                <tr>
+                <!--tr>
                     <td class="th">
                         Bases de datos:
                     </td>
@@ -99,17 +98,22 @@
                         <img src="./images/tecnologias/PostgreSQL.png" alt="" title="PostreSQL"
                             class="tecnologiasManejadasIcono">
                     </td>
-                </tr>
+                </tr-->
             </table>
             <hr>
             <div class="otrasSkills container">
                 <div class="Hard Skills">
                     <h1 style="text-align: center;">Hard skills</h2>
                         <ul class="">
-                            <li>Diseño y modelado de base de datos</li>
-                            <li>Operaciones en SQL (consultas, joins, triggers, funciones y procesos almacenados)</li>
+                            <li>Diseño y modelado de base de datos (Power Designer)</li>
+                            <li>Manejo de gestores de base de datos (MySQL, PostgreSQL, SQL Developer, SQLite) </li>
+                            <li>Stack Java para la web (Spring boot, Spring security, Hibernate, JSP)</li>
+                            <li>Python-Django</li>
+                            <li>SQL (DCL, DDL, DML, PL)</li>
                             <li>Análisis de requirimientos</li>
                             <li>Diseño de interfaces</li>
+                            <li>Control de versiones (GitHub)</li>
+                            <li>Manejo de sesiones (JWT)</li>
                         </ul>
                 </div>
                 <div class="Soft Skills">
@@ -127,82 +131,6 @@
     </div>
     <div class="misproyectos container" id="misproyectos" style="display: none; opacity: 0;">
         <div class="proyectoscontainer" id="proyectoscontainer">
-            <!--div class="cardproyecto container" id="cardproyecto">
-                <div class="encabezado-proyecto">
-                <a href="" class="agithubproyectoicon" target="_blank"><img src="./images/contacto/github-dark.png" title="Ir al repositorio" class="githubproyectoicon"></a>
-                    <p class="nombreproyecto">Sistema de planillas y gestión de empleados</p>
-                </div>
-                    <img class="proyectoimage" id="proyectoimage" src="./images/proyectos/sistema de planillas.webp">
-                    <p id="descripcion" class="proyecto-descripcion">Software para administrar empleados, incluyendo vacaciones, horas trabajadas, permisos, descuentos y bonos. Automatiza procesos de nómina y mejora la gestión del personal.</p>
-                    <p class="tecnologias">Tecnologías: </p>
-                    <div class="tecnologiasiconos container">
-                    <img class="tecnologiaicono" title="HTML" src="./images/tecnologias/HTML.png"><img class="tecnologiaicono" title="Boostrap" src="./images/tecnologias/Boostrap.png"><img class="tecnologiaicono" title="JS" src="./images/tecnologias/JS.png"><img class="tecnologiaicono" title="Spring Boot" src="./images/tecnologias/Spring Boot.png"><img class="tecnologiaicono" title="MySQL" src="./images/tecnologias/MySQL.png"><img class="tecnologiaicono" title="HTML" src="./images/tecnologias/HTML.png"><img class="tecnologiaicono" title="Boostrap" src="./images/tecnologias/Boostrap.png"><img class="tecnologiaicono" title="JS" src="./images/tecnologias/JS.png"><img class="tecnologiaicono" title="Spring Boot" src="./images/tecnologias/Spring Boot.png"><img class="tecnologiaicono" title="MySQL" src="./images/tecnologias/MySQL.png">
-                    </div>
-                    <a href="" target="_blank" class="abotonvisitar"><button class="botonvisitar">Visitar</button></a>
-            </div>
-            <a href=""></a>
-            <div class="cardproyecto" id="cardproyecto">
-                        <div class="encabezado-proyecto">
-                            <a href="" class="agithubproyectoicon" target="_blank"><img src="./images/contacto/github-dark.png" title="Ir al repositorio" class="githubproyectoicon"></a>
-                            <p class="nombreproyecto">Sistema gestor de notas</p>
-                        </div>
-                        <img class="proyectoimage" id="proyectoimage" src="./images/proyectos/sistema gestor de notas.webp">
-                        <p id="descripcion" class="proyecto-descripcion">Plataforma para la gestión de alumnos, materias y notas escolares. Facilita el seguimiento académico y la generación de reportes. Simplifica la administración educativa con una interfaz intuitiva.</p>
-                        <p class="tecnologias">Tecnologías: </p>
-                        <div class="tecnologiasiconos container">
-                        <img class="tecnologiaicono" title="HTML" src="./images/tecnologias/HTML.png"><img class="tecnologiaicono" title="Boostrap" src="./images/tecnologias/Boostrap.png"><img class="tecnologiaicono" title="Django" src="./images/tecnologias/Django.png"><img class="tecnologiaicono" title="MySQL" src="./images/tecnologias/MySQL.png">
-                        </div>
-                        <a href="" target="_blank" class="abotonvisitar"><button class="botonvisitar">Visitar</button></a>
-            </div>
-            <style>
-                .tabla-proyecto td{
-                    width: 50%;
-                }
-            </style>
-            <table class="tabla-proyecto" style="border: 1px solid black; width: 100%;">
-                <tr>
-                    <td>
-                        <div class="encabezado-proyecto">
-                            <a href="" class="agithubproyectoicon" target="_blank"><img src="./images/contacto/github-dark.png" title="Ir al repositorio" class="githubproyectoicon"></a>
-                                <p class="nombreproyecto">Sistema de planillas y gestión de empleados</p>
-                            </div>
-                    </td>
-                    <td>
-                        <div class="encabezado-proyecto">
-                            <a href="" class="agithubproyectoicon" target="_blank"><img src="./images/contacto/github-dark.png" title="Ir al repositorio" class="githubproyectoicon"></a>
-                            <p class="nombreproyecto">Sistema gestor de notas</p>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <img class="proyectoimage" id="proyectoimage" src="./images/proyectos/sistema de planillas.webp">
-
-                    </td>
-                    <td>
-                        <img class="proyectoimage" id="proyectoimage" src="./images/proyectos/sistema gestor de notas.webp">
-
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div class="d-flex">
-                            <p class="tecnologias">Tecnologías: </p>
-                    <div class="tecnologiasiconos container">
-                    <img class="tecnologiaicono" title="HTML" src="./images/tecnologias/HTML.png"><img class="tecnologiaicono" title="Boostrap" src="./images/tecnologias/Boostrap.png"><img class="tecnologiaicono" title="JS" src="./images/tecnologias/JS.png"><img class="tecnologiaicono" title="Spring Boot" src="./images/tecnologias/Spring Boot.png"><img class="tecnologiaicono" title="MySQL" src="./images/tecnologias/MySQL.png"><img class="tecnologiaicono" title="HTML" src="./images/tecnologias/HTML.png"><img class="tecnologiaicono" title="Boostrap" src="./images/tecnologias/Boostrap.png"><img class="tecnologiaicono" title="JS" src="./images/tecnologias/JS.png"><img class="tecnologiaicono" title="Spring Boot" src="./images/tecnologias/Spring Boot.png"><img class="tecnologiaicono" title="MySQL" src="./images/tecnologias/MySQL.png">
-                    </div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="d-flex">
-                        <p class="tecnologias">Tecnologías: </p>
-                        <div class="tecnologiasiconos container">
-                        <img class="tecnologiaicono" title="HTML" src="./images/tecnologias/HTML.png"><img class="tecnologiaicono" title="Boostrap" src="./images/tecnologias/Boostrap.png"><img class="tecnologiaicono" title="Django" src="./images/tecnologias/Django.png"><img class="tecnologiaicono" title="MySQL" src="./images/tecnologias/MySQL.png">
-                        </div>
-                    </div>
-                    </td>
-                </tr>
-            </table-->
         </div>
         </div>
     </div>
