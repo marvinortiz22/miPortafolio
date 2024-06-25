@@ -52,7 +52,7 @@ footer {
 }
 
 .mi-foto {
-  width: 200px;
+  width: 154.88px;
   height: 234px;
   grid-column: 1;
   grid-row: 1/span 2;
@@ -110,8 +110,7 @@ h1,h2{
   transition: opacity 1s ease;
 }
 
-.proyectoscontainer,
-.proyectosocultos {
+.proyectoscontainer {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
@@ -274,6 +273,12 @@ hr {
   border: 1px solid gray !important;
 }
 
+@media(max-width: 768px){
+  .proyecto-descripcion{
+    min-height: 140.75px;
+  }
+}
+
 @media (max-width: 576px) {
   .titulo-descripcion{
     text-align: center;
@@ -303,10 +308,9 @@ hr {
   }
 
   .mi-foto {
-    width: 100%;
-    height: auto;
-    margin-left: 1%;
-    margin-right: 1%;
+    width: 154.88px;
+    height: 234px;
+    margin:1%;
   }
 
   .cardproyecto {
@@ -339,12 +343,6 @@ hr {
 
   ul {
     margin: 1%;
-  }
-}
-
-@media(max-width: 768px){
-  .proyecto-descripcion{
-    min-height: 140.75px;
   }
 }
 
