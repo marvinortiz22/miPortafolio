@@ -94,6 +94,14 @@ h1,h2{
   margin: 1%;
 }
 
+.icono{
+  transition: filter 0.3s ease;
+}
+
+.icono:hover {
+  filter: brightness(1.25); /* Ajusta el brillo al hacer hover */
+}
+
 .contactotexto {
   margin:0;
   white-space: nowrap;
@@ -145,10 +153,16 @@ h1,h2{
 .agithubproyectoicon {
   width: fit-content;
   margin: 1%;
+  /* Necesario para posicionar la capa de brillo */
 }
 
 .githubproyectoicon {
   height: 3em;
+  transition: filter 0.3s ease; /* Transición suave para el filtro */
+}
+
+.agithubproyectoicon:hover .githubproyectoicon {
+  filter: brightness(1.5); /* Ajusta el brillo al hacer hover */
 }
 
 .nombreproyecto {
@@ -210,7 +224,13 @@ h1,h2{
   margin: 1% auto;
   color: green;
   font-weight: bold;
-  border: 1px solid green
+  border: 1px solid green;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.botonvisitar:hover {
+  background-color: green; /* Cambia el color de fondo al pasar el cursor */
+  color: white; /* Cambia el color del texto al pasar el cursor */
 }
 
 .tablatecnologias {

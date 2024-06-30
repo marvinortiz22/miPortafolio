@@ -76,7 +76,7 @@ function cargarProyectos() {
             <p id="descripcion" class="proyecto-descripcion">${proyectos[i].descripcion}</p>
             <div class="tecnologiasiconos">
             <p class="tecnologias">Tecnologías: </p>
-            ${proyectos[i].tecnologias.map(tecnologia => `<img class="tecnologiaicono" title="${tecnologia}" src="./images/tecnologias/${tecnologia}.png"></img>`).join('')}
+            ${proyectos[i].tecnologias.map(tecnologia => `<img class="tecnologiaicono icono" title="${tecnologia}" src="./images/tecnologias/${tecnologia}.png"></img>`).join('')}
             </div>
             ${['Sistema de planillas y gestión de empleados', 'RaidSim'].includes(proyectos[i].nombre) ? `<a href="${proyectos[i].url}" target="_blank" class="abotonvisitar"><button class="botonvisitar">Visitar</button></a>` : ''}       
         </div>`
