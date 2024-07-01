@@ -190,6 +190,10 @@ h1,h2{
   align-items: center;
 }
 
+.proyecto-descripcion-1,.proyecto-descripcion-2{
+  min-height: 125.66px;
+}
+
 .tecnologias {
   font-weight: bold;
   margin: 1%;
@@ -292,10 +296,18 @@ li::before {
 hr {
   border: 1px solid gray !important;
 }
+@media(max-width: 991px){
+  .proyecto-descripcion-1,.proyecto-descripcion-2{
+    min-height: 199.84px;
+  }
+}
 
-@media(max-width: 768px){
+@media(max-width: 769px){
   .proyecto-descripcion{
     min-height: 140.75px;
+  }
+  .proyecto-descripcion-1,.proyecto-descripcion-2{
+    min-height:217.25px;
   }
 }
 

@@ -1,27 +1,30 @@
 let proyectos = [
     {
+        id:1,
         nombre: "Sistema de planillas y gestión de empleados",
         srcfoto: "./images/proyectos/sistema de planillas.webp",
-        descripcion: "Software para administrar empleados, incluyendo vacaciones, horas trabajadas, permisos, descuentos y bonos. Automatiza procesos de nómina y mejora la gestión del personal.",
+        descripcion: "Software para administrar empleados, incluyendo vacaciones, horas trabajadas, permisos, descuentos y bonos. Automatiza procesos de nómina y mejora la gestión del personal.<br><br>Cuenta de admin: username: marvin, contraseña: marvin1234*",
         tecnologias: ["JSP","Boostrap", "JS", "Spring Boot", "MySQL"],
         url: "https://sistema-de-planillas-production.up.railway.app/",
         repositorio: "https://github.com/marvinortiz22/EmpleaPro"
     },
     {
+        id:2,
+        nombre: "Sistema gestor de notas",
+        srcfoto: "./images/proyectos/sistema gestor de notas.webp",
+        descripcion: "Plataforma para la gestión de alumnos, materias y notas escolares. Facilita el seguimiento académico y la generación de reportes. Simplifica la administración educativa con una interfaz intuitiva.<br><br>Cuenta de admin: username: admin, contraseña: lajd9837*<br>Cuenta de usuario: username: oc20013, contraseña: skdje2517*",
+        tecnologias: ["HTML", "Boostrap", "JS", "Django", "MySQL"],
+        url: "http://sabin222.pythonanywhere.com",
+        repositorio: "https://github.com/ManuelRRo/SGN1302"
+    },
+    {
+        id:3,
         nombre: "RaidSim",
         srcfoto: "./images/proyectos/RaidSim.png",
         descripcion: "Simulador que permite experimentar con distintos tipos de arreglos RAID. Muestra la distribución de discos duros y cómo se almacenan los datos en ellos. Ideal para entender la redundancia y el rendimiento de cada configuración.",
         tecnologias: ["HTML", "Boostrap", "JS"],
         url: "https://marvinortiz22.github.io/RAIDSim/",
         repositorio: "https://github.com/marvinortiz22/RAIDSim"
-    },
-    {
-        nombre: "Sistema gestor de notas",
-        srcfoto: "./images/proyectos/sistema gestor de notas.webp",
-        descripcion: "Plataforma para la gestión de alumnos, materias y notas escolares. Facilita el seguimiento académico y la generación de reportes. Simplifica la administración educativa con una interfaz intuitiva.",
-        tecnologias: ["HTML", "Boostrap", "JS", "Django", "MySQL"],
-        url: "",
-        repositorio: "https://github.com/ManuelRRo/SGN1302"
     },
     {
         nombre: "Sistema de estados financieros",
@@ -73,12 +76,12 @@ function cargarProyectos() {
                 <p class="nombreproyecto">${proyectos[i].nombre}</p>
             </div>
             <img class="proyectoimage" id="proyectoimage" src="${proyectos[i].srcfoto}">
-            <p id="descripcion" class="proyecto-descripcion">${proyectos[i].descripcion}</p>
+            <p id="descripcion" class="proyecto-descripcion proyecto-descripcion-${proyectos[i].id}">${proyectos[i].descripcion}</p>
             <div class="tecnologiasiconos">
             <p class="tecnologias">Tecnologías: </p>
             ${proyectos[i].tecnologias.map(tecnologia => `<img class="tecnologiaicono icono" title="${tecnologia}" src="./images/tecnologias/${tecnologia}.png"></img>`).join('')}
             </div>
-            ${['Sistema de planillas y gestión de empleados', 'RaidSim'].includes(proyectos[i].nombre) ? `<a href="${proyectos[i].url}" target="_blank" class="abotonvisitar"><button class="botonvisitar">Visitar</button></a>` : ''}       
+            ${[1,2,3].includes(proyectos[i].id) ? `<a href="${proyectos[i].url}" target="_blank" class="abotonvisitar"><button class="botonvisitar">Visitar</button></a>` : ''}       
         </div>`
     }
 }
