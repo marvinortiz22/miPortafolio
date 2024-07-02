@@ -3,7 +3,10 @@ let proyectos = [
         id:1,
         nombre: "Sistema de planillas y gestión de empleados",
         srcfoto: "./images/proyectos/sistema de planillas.webp",
-        descripcion: "Software para administrar empleados, incluyendo vacaciones, horas trabajadas, permisos, descuentos y bonos. Automatiza procesos de nómina y mejora la gestión del personal.<br><br>Cuenta de admin: username: marvin, contraseña: marvin1234*",
+        descripcion: "Software para administrar empleados, incluyendo vacaciones, horas trabajadas, permisos, descuentos y bonos. Automatiza procesos de nómina y mejora la gestión del personal.",
+        cuentas:[
+            {username:"marvin",password:"marvin1234*",tipo:"usuario"}
+        ],
         tecnologias: ["JSP","Boostrap", "JS", "Spring Boot", "MySQL"],
         url: "https://sistema-de-planillas-production.up.railway.app/",
         repositorio: "https://github.com/marvinortiz22/EmpleaPro"
@@ -12,7 +15,11 @@ let proyectos = [
         id:2,
         nombre: "Sistema gestor de notas",
         srcfoto: "./images/proyectos/sistema gestor de notas.webp",
-        descripcion: "Plataforma para la gestión de alumnos, materias y notas escolares. Facilita el seguimiento académico y la generación de reportes. Simplifica la administración educativa con una interfaz intuitiva.<br><br>Cuenta de admin: username: admin, contraseña: lajd9837*<br>Cuenta de usuario: username: oc20013, contraseña: skdje2517*",
+        descripcion: "Plataforma para la gestión de alumnos, materias y notas escolares. Facilita el seguimiento académico y la generación de reportes. Simplifica la administración educativa con una interfaz intuitiva.",
+        cuentas:[
+            {username:"admin",password:"lajd9837*",tipo:"admin"},
+            {username:"oc20013",password:"skdje2517*",tipo:"usuario"}
+        ],
         tecnologias: ["HTML", "Boostrap", "JS", "Django", "MySQL"],
         url: "http://sabin222.pythonanywhere.com",
         repositorio: "https://github.com/ManuelRRo/SGN1302"
@@ -22,6 +29,7 @@ let proyectos = [
         nombre: "RaidSim",
         srcfoto: "./images/proyectos/RaidSim.png",
         descripcion: "Simulador que permite experimentar con distintos tipos de arreglos RAID. Muestra la distribución de discos duros y cómo se almacenan los datos en ellos. Ideal para entender la redundancia y el rendimiento de cada configuración.",
+        cuentas:[],
         tecnologias: ["HTML", "Boostrap", "JS"],
         url: "https://marvinortiz22.github.io/RAIDSim/",
         repositorio: "https://github.com/marvinortiz22/RAIDSim"
@@ -30,6 +38,7 @@ let proyectos = [
         nombre: "Sistema de estados financieros",
         srcfoto: "./images/proyectos/sistema de estados financieros.jpg",
         descripcion: "Permite visualizar el balance general y el estado de resultados de una o varias empresas. Incluye cálculos de ratios financieros esenciales. Ayuda en el análisis y toma de decisiones financieras.",
+        cuentas:[],
         tecnologias: ["HTML", "Boostrap","JS", "Django", "MySQL"],
         url: "",
         repositorio: "https://github.com/ManuelRRo/sistemacontable"
@@ -38,6 +47,7 @@ let proyectos = [
         nombre: "Sistema de gestion de proyectos viales",
         srcfoto: "./images/proyectos/sistema de gestion de proyectos viales.jpg",
         descripcion: "Solución integral para gestionar proyectos de infraestructura vial. Controla costos, materiales y seguimiento de proyectos. Permite la gestión eficiente de clientes y recursos en proyectos viales.",
+        cuentas:[],
         tecnologias: ["HTML", "Boostrap","JS", "Django", "MySQL"],
         url: "",
         repositorio: "https://github.com/marvinortiz22/SIGPOGAC"
@@ -46,6 +56,7 @@ let proyectos = [
         nombre: "Tekedafash",
         srcfoto: "./images/proyectos/tekedafash.jpg",
         descripcion: "Plataforma online diseñada para la venta y gestión de productos de moda. Incluye catálogo de productos y carrito de compras. Mejora la experiencia de compra y administración del inventario.",
+        cuentas:[],
         tecnologias: ["HTML", "Boostrap", "JS","Django", "MySQL"],
         url: "",
         repositorio: "https://github.com/marvinortiz22/tekedafash"
@@ -54,6 +65,7 @@ let proyectos = [
         nombre: "Sistema de reporte de accidentes viales",
         srcfoto: "./images/proyectos/sistema de reportes de transito.jpg",
         descripcion: "Aplicación para reportar accidentes de tráfico y ubicarlos en un mapa. Facilita la recopilación de datos y la respuesta rápida ante emergencias. Ayuda a las autoridades y ciudadanos a tener una visión clara de los incidentes viales.",
+        cuentas:[],
         tecnologias: ["HTML", "Boostrap", "JS", "Django", "PostgreSQL"],
         url: "",
         repositorio: "https://github.com/marvinortiz22/VialAlert"
@@ -76,12 +88,33 @@ function cargarProyectos() {
                 <p class="nombreproyecto">${proyectos[i].nombre}</p>
             </div>
             <img class="proyectoimage" id="proyectoimage" src="${proyectos[i].srcfoto}">
-            <p id="descripcion" class="proyecto-descripcion proyecto-descripcion-${proyectos[i].id}">${proyectos[i].descripcion}</p>
+            <p id="descripcion" class="proyecto-descripcion proyecto-descripcion-${proyectos[i].id}">${proyectos[i].descripcion}</p>         
             <div class="tecnologiasiconos">
             <p class="tecnologias">Tecnologías: </p>
             ${proyectos[i].tecnologias.map(tecnologia => `<img class="tecnologiaicono icono" title="${tecnologia}" src="./images/tecnologias/${tecnologia}.png"></img>`).join('')}
             </div>
-            ${[1,2,3].includes(proyectos[i].id) ? `<a href="${proyectos[i].url}" target="_blank" class="abotonvisitar"><button class="botonvisitar">Visitar</button></a>` : ''}       
+            ${proyectos[i].cuentas && proyectos[i].cuentas.length > 0 ? `
+                <div class="cuentas">
+                    <p style="margin: 1%; font-weight: bold;">Cuentas</p>
+                    <table class="tabla-cuentas">
+                        <tr>
+                            <th>Username</th>
+                            <th>Password</th>
+                            <th>Tipo</th>
+                        </tr>
+                        ${proyectos[i].cuentas.map(cuenta => `
+                            <tr>
+                                <td>${cuenta.username}</td>
+                                <td>${cuenta.password}</td>
+                                <td>${cuenta.tipo}</td>
+                            </tr>
+                        `).join('')}   
+                    </table>
+                </div>` : ''}
+            <a href="${proyectos[i].url}" target="_blank" class="abotonvisitar">
+            ${[1,2,3].includes(proyectos[i].id) ? `<button class="botonvisitar">Visitar</button>` : ''}
+            </a>
+                   
         </div>`
     }
 }

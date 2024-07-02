@@ -190,9 +190,29 @@ h1,h2{
   align-items: center;
 }
 
-.proyecto-descripcion-1,.proyecto-descripcion-2{
-  min-height: 125.66px;
+.cuentas{
+  margin: 0%;
+  padding: 0 1% 0 1%;
+  width: 100%;
+  border-top: 2px solid gray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 102.3px;
 }
+
+.tabla-cuentas{
+  width: 100%;
+}
+
+.tabla-cuentas td,.tabla-cuentas th{
+  width: 33%;
+}
+
+/*.proyecto-descripcion-1,.proyecto-descripcion-2{
+  min-height: 125.66px;
+}*/
 
 .tecnologias {
   font-weight: bold;
@@ -219,13 +239,16 @@ h1,h2{
 .abotonvisitar {
   border-top: 2px solid gray;
   width: 100%;
-  height: fit-content;
+  height: 34px;
+  align-items: center;
+  display: flex;
+  text-decoration: none;
 }
 
 .botonvisitar {
   border-radius: 5px;
   background-color: inherit;
-  margin: 1% auto;
+  margin: 0 auto;
   color: green;
   font-weight: bold;
   border: 1px solid green;
@@ -296,19 +319,19 @@ li::before {
 hr {
   border: 1px solid gray !important;
 }
-@media(max-width: 991px){
+/*@media(max-width: 991px){
   .proyecto-descripcion-1,.proyecto-descripcion-2{
     min-height: 199.84px;
   }
-}
+}*/
 
 @media(max-width: 769px){
   .proyecto-descripcion{
     min-height: 140.75px;
   }
-  .proyecto-descripcion-1,.proyecto-descripcion-2{
+  /*.proyecto-descripcion-1,.proyecto-descripcion-2{
     min-height:217.25px;
-  }
+  }*/
 }
 
 @media (max-width: 576px) {
