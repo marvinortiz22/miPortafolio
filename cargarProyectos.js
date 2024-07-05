@@ -26,6 +26,16 @@ let proyectos = [
     },
     {
         id:3,
+        nombre: "Sistema de gestion de proyectos viales",
+        srcfoto: "./images/proyectos/sistema de gestion de proyectos viales.jpg",
+        descripcion: "Solución integral para gestionar proyectos de infraestructura vial. Controla equipo, materiales y seguimiento de proyectos. Permite la gestión eficiente de clientes y recursos en proyectos viales.",
+        cuentas:[],
+        tecnologias: ["HTML", "Boostrap","JS", "Django", "MySQL"],
+        url: "https://marvin223.pythonanywhere.com/",
+        repositorio: "https://github.com/marvinortiz22/SIGPOGAC"
+    },
+    {
+        id:4,
         nombre: "RaidSim",
         srcfoto: "./images/proyectos/RaidSim.png",
         descripcion: "Simulador que permite experimentar con distintos tipos de arreglos RAID. Muestra la distribución de discos duros y cómo se almacenan los datos en ellos. Ideal para entender la redundancia y el rendimiento de cada configuración.",
@@ -42,15 +52,6 @@ let proyectos = [
         tecnologias: ["HTML", "Boostrap","JS", "Django", "MySQL"],
         url: "",
         repositorio: "https://github.com/ManuelRRo/sistemacontable"
-    },
-    {
-        nombre: "Sistema de gestion de proyectos viales",
-        srcfoto: "./images/proyectos/sistema de gestion de proyectos viales.jpg",
-        descripcion: "Solución integral para gestionar proyectos de infraestructura vial. Controla costos, materiales y seguimiento de proyectos. Permite la gestión eficiente de clientes y recursos en proyectos viales.",
-        cuentas:[],
-        tecnologias: ["HTML", "Boostrap","JS", "Django", "MySQL"],
-        url: "",
-        repositorio: "https://github.com/marvinortiz22/SIGPOGAC"
     },
     {
         nombre: "Tekedafash",
@@ -112,7 +113,7 @@ function cargarProyectos() {
                     </table>
                 </div>` : ''}
             <a href="${proyectos[i].url}" target="_blank" class="abotonvisitar">
-            ${[1,2,3].includes(proyectos[i].id) ? `<button class="botonvisitar">Visitar</button>` : ''}
+            ${[1,2,3,4].includes(proyectos[i].id) ? `<button class="botonvisitar">Visitar</button>` : ''}
             </a>
                    
         </div>`
