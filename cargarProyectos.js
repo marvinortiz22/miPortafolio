@@ -4,11 +4,8 @@ let proyectos = [
         nombre: "Sistema de planillas y gestión de empleados",
         srcfoto: "./images/proyectos/sistema de planillas.webp",
         descripcion: "Software para administrar empleados, incluyendo vacaciones, horas trabajadas, permisos, descuentos y bonos. Automatiza procesos de nómina y mejora la gestión del personal.",
-        cuentas:[
-            {username:"marvin",password:"marvin1234*",tipo:"usuario"}
-        ],
         tecnologias: ["JSP","Boostrap", "JS", "Spring Boot", "MySQL"],
-        url: "https://sistema-de-planillas-production.up.railway.app/",
+        url: "https://empleapro-production.up.railway.app/",
         repositorio: "https://github.com/marvinortiz22/EmpleaPro"
     },
     {
@@ -16,10 +13,6 @@ let proyectos = [
         nombre: "Sistema gestor de notas",
         srcfoto: "./images/proyectos/sistema gestor de notas.webp",
         descripcion: "Plataforma para la gestión de alumnos, materias y notas escolares. Facilita el seguimiento académico y la generación de reportes. Simplifica la administración educativa con una interfaz intuitiva.",
-        cuentas:[
-            {username:"admin",password:"lajd9837*",tipo:"admin"},
-            {username:"oc20013",password:"skdje2517*",tipo:"usuario"}
-        ],
         tecnologias: ["HTML", "Boostrap", "JS", "Django", "MySQL"],
         url: "http://sabin222.pythonanywhere.com",
         repositorio: "https://github.com/ManuelRRo/SGN1302"
